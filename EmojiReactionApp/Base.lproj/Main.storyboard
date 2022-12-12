@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GUQ-DM-L27">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="RLd-pc-Cw0">
+            <objects>
+                <viewController id="GUQ-DM-L27" customClass="ViewController" customModule="ProfileScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmd-11-F7A">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrC-DJ-eFT" customClass="ReactionAnimationView" customModule="ProfileScroll" customModuleProvider="target">
+                                <rect key="frame" x="46.666666666666657" y="468" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gA7-WJ-aNc"/>
+                                    <constraint firstAttribute="height" constant="300" id="pqk-bI-uqs"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNh-w8-eFk">
+                                <rect key="frame" x="196" y="768" width="1" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vE-56-LFw">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="1tk-GC-Avd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G6M-a2-kfj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Md-io-DZB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MNh-w8-eFk" firstAttribute="centerX" secondItem="KrC-DJ-eFT" secondAttribute="centerX" id="BiB-0O-ykG"/>
+                            <constraint firstItem="2Md-io-DZB" firstAttribute="bottom" secondItem="MNh-w8-eFk" secondAttribute="bottom" id="NeL-v4-HCm"/>
+                            <constraint firstItem="MNh-w8-eFk" firstAttribute="top" secondItem="KrC-DJ-eFT" secondAttribute="bottom" id="QEy-pG-bO1"/>
+                            <constraint firstItem="KrC-DJ-eFT" firstAttribute="centerX" secondItem="2Md-io-DZB" secondAttribute="centerX" id="cdS-Hr-aVm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reactionStack" destination="MNh-w8-eFk" id="0sb-nB-7Zd"/>
+                        <outlet property="reactionView" destination="KrC-DJ-eFT" id="Zdg-zC-HhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Biw-9H-COO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
